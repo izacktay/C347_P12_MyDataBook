@@ -24,9 +24,7 @@
         android:id="@+id/editTextPassPhrase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Access Code">
-    </EditText>
+        android:ems="10"></EditText>
 
 
 </LinearLayout>
