@@ -1,5 +1,6 @@
 package sg.edu.rp.c347.c347_p12_mydatabook;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -48,12 +49,16 @@ public class MainActivity extends AppCompatActivity {
                     position, long arg3) {
 
                 Fragment fragment = null;
-                if (position == 0)
+                if (position == 0) {
                     fragment = new BioFragment();
-                else if (position == 1)
+                } else if (position == 1) {
                     fragment = new VaccinationFragment();
-                else if (position == 2)
+                } else if (position == 2) {
                     fragment = new AnniversaryFragment();
+                } else if (position == 3){
+                    Intent i = new Intent(getBaseContext(),AboutUs.class);
+                    startActivity(i);
+                }
 
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction trans = fm.beginTransaction();
