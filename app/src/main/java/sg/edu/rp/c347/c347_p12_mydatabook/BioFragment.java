@@ -32,7 +32,7 @@ public class BioFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bio, container, false);
 
-        tv = (TextView) view.findViewById(R.id.textView);
+        tv = (TextView) view.findViewById(R.id.tvBio);
         btnEdit = (Button) view.findViewById(R.id.buttonEdit);
 
 
@@ -66,7 +66,7 @@ public class BioFragment extends Fragment {
                         })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getContext(), "You clicked cancle", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(), "You clicked cancel", Toast.LENGTH_LONG).show();
 
                     }
                 });

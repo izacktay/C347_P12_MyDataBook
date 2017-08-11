@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerList = (ListView) findViewById(R.id.left_drawer);
 
-        drawerItems = new String[]{"Bio", "Vaccination", "Anniversary"};
+        drawerItems = new String[]{"Bio", "Vaccination", "Anniversary", "About Us"};
         ab = getSupportActionBar();
 
         aa = new ArrayAdapter<String>(this,
@@ -60,10 +60,12 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                 }
 
-                FragmentManager fm = getSupportFragmentManager();
-                FragmentTransaction trans = fm.beginTransaction();
-                trans.replace(R.id.content_frame, fragment);
-                trans.commit();
+                if(position != 3){
+                    FragmentManager fm = getSupportFragmentManager();
+                    FragmentTransaction trans = fm.beginTransaction();
+                    trans.replace(R.id.content_frame, fragment);
+                    trans.commit();
+                }
 
                 // Highlight the selected item,
                 //  update the title, and close the drawer
@@ -127,5 +129,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    }
+}
 
