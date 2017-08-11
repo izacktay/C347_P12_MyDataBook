@@ -103,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         // Sync toggle state so the indicator is shown properly.
         //  Have to call in onPostCreate()
         drawerToggle.syncState();
+
+        //HelloTesting
     }
 
     @Override
